@@ -2805,8 +2805,8 @@ INT_PTR CALLBACK PhpRunFileWndProc(
                                 {
                                     PPH_STRING buttonText;
 
-                                    SetTextColor(customDraw->hdc, RGB(0, 0, 0));
-                                    SetDCBrushColor(customDraw->hdc, RGB(0xff, 0xff, 0xff));
+                                    SetTextColor(customDraw->hdc, RGB(0xff, 0xff, 0xff));
+                                    SetDCBrushColor(customDraw->hdc, RGB(0, 0, 0));
                                     FillRect(customDraw->hdc, &customDraw->rc, GetStockBrush(DC_BRUSH));
 
                                     if (buttonText = PhGetWindowText(customDraw->hdr.hwndFrom))

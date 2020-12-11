@@ -3031,8 +3031,8 @@ BOOLEAN NTAPI PhpProcessTreeNewCallback(
                 PH_PLUGIN_GET_HIGHLIGHTING_COLOR getHighlightingColor;
 
                 getHighlightingColor.Parameter = processItem;
-                getHighlightingColor.BackColor = RGB(0xff, 0xff, 0xff);
-                getHighlightingColor.ForeColor = RGB(0x00, 0x00, 0x00);
+                getHighlightingColor.BackColor = RGB(0x00, 0x00, 0x00);
+                getHighlightingColor.ForeColor = RGB(0xff, 0xff, 0xff);
                 getHighlightingColor.Handled = FALSE;
                 getHighlightingColor.Cache = FALSE;
 

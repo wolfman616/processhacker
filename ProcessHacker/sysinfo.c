@@ -951,14 +951,14 @@ VOID PhSiSetColorsGraphDrawInfo(
     switch (PhCsGraphColorMode)
     {
     case 0: // New colors
-        DrawInfo->BackColor = RGB(0xef, 0xef, 0xef);
+        DrawInfo->BackColor = RGB(0x00, 0x00, 0x00);
         DrawInfo->LineColor1 = PhHalveColorBrightness(Color1);
         DrawInfo->LineBackColor1 = PhMakeColorBrighter(Color1, 125);
         DrawInfo->LineColor2 = PhHalveColorBrightness(Color2);
         DrawInfo->LineBackColor2 = PhMakeColorBrighter(Color2, 125);
         DrawInfo->GridColor = RGB(0xc7, 0xc7, 0xc7);
         DrawInfo->LabelYColor = RGB(0xa0, 0x60, 0x20);
-        DrawInfo->TextColor = RGB(0x00, 0x00, 0x00);
+        DrawInfo->TextColor = RGB(0xfe, 0xfe, 0xfe);
         DrawInfo->TextBoxColor = RGB(0xe7, 0xe7, 0xe7);
         break;
     case 1: // Old colors
@@ -1120,8 +1120,8 @@ VOID PhSipUpdateColorParameters(
     switch (PhCsGraphColorMode)
     {
     case 0: // New colors
-        CurrentParameters.GraphBackColor = RGB(0xef, 0xef, 0xef);
-        CurrentParameters.PanelForeColor = RGB(0x00, 0x00, 0x00);
+        CurrentParameters.GraphBackColor = RGB(0x00, 0x00, 0x00);
+        CurrentParameters.PanelForeColor = RGB(0xff, 0xff, 0xff);
         break;
     case 1: // Old colors
         CurrentParameters.GraphBackColor = RGB(0x00, 0x00, 0x00);
@@ -1270,8 +1270,8 @@ VOID PhSipDrawRestoreSummaryPanel(
         switch (PhCsGraphColorMode)
         {
         case 0: // New colors
-            SetTextColor(bufferDc, RGB(0x00, 0x00, 0x00));
-            SetDCBrushColor(bufferDc, RGB(0xff, 0xff, 0xff));
+            SetTextColor(bufferDc, RGB(0xff, 0xff, 0xff));
+            SetDCBrushColor(bufferDc, RGB(0x00, 0x00, 0x00));
             FillRect(bufferDc, &bufferRect, GetStockBrush(DC_BRUSH));
             break;
         case 1: // Old colors
@@ -1283,8 +1283,8 @@ VOID PhSipDrawRestoreSummaryPanel(
     }
     else
     {
-        SetTextColor(bufferDc, RGB(0x00, 0x00, 0x00));
-        SetDCBrushColor(bufferDc, RGB(0xff, 0xff, 0xff));
+        SetTextColor(bufferDc, RGB(0xff, 0xff, 0xff));
+        SetDCBrushColor(bufferDc, RGB(0x00, 0x00, 0x00));
         FillRect(bufferDc, &bufferRect, GetStockBrush(DC_BRUSH));
     }
 
@@ -1380,7 +1380,7 @@ VOID PhSipDrawSeparator(
         //FillRect(bufferDc, &bufferRect, GetSysColorBrush(COLOR_3DSHADOW));
         //bufferRect.left -= 1;
 
-        SetDCBrushColor(bufferDc, RGB(0xff, 0xff, 0xff));
+        SetDCBrushColor(bufferDc, RGB(0x00, 0x00, 0x00));
         FillRect(bufferDc, &bufferRect, GetStockBrush(DC_BRUSH));
     }
 
@@ -1418,8 +1418,8 @@ VOID PhSipDrawPanel(
             switch (PhCsGraphColorMode)
             {
             case 0: // New colors
-                SetTextColor(hdc, RGB(0x00, 0x00, 0x00));
-                SetDCBrushColor(hdc, RGB(0xff, 0xff, 0xff));
+                SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+                SetDCBrushColor(hdc, RGB(0x00, 0x00, 0x00));
                 FillRect(hdc, Rect, GetStockBrush(DC_BRUSH));
                 break;
             case 1: // Old colors
@@ -1431,8 +1431,8 @@ VOID PhSipDrawPanel(
         }
         else
         {
-            SetTextColor(hdc, RGB(0x00, 0x00, 0x00));
-            SetDCBrushColor(hdc, RGB(0xff, 0xff, 0xff));
+            SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+            SetDCBrushColor(hdc, RGB(0x00, 0x00, 0x00));
             FillRect(hdc, Rect, GetStockBrush(DC_BRUSH));
         }
 
@@ -1582,7 +1582,7 @@ VOID PhSipDefaultDrawPanel(
         switch (PhCsGraphColorMode)
         {
         case 0: // New colors
-            SetTextColor(hdc, RGB(0x00, 0x00, 0x00));
+            SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
             //SetDCBrushColor(hdc, RGB(0xff, 0xff, 0xff));
             //FillRect(hdc, Rect, GetStockBrush(DC_BRUSH));
             break;
@@ -1597,7 +1597,7 @@ VOID PhSipDefaultDrawPanel(
     }
     else
     {
-        SetTextColor(hdc, RGB(0x00, 0x00, 0x00));
+        SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
 
         if (CurrentView == SysInfoSummaryView)
         {
