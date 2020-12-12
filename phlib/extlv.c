@@ -261,7 +261,7 @@ LRESULT CALLBACK PhpExtendedListViewWndProc(
                                     if (PhGetColorBrightness(customDraw->clrTextBk) > 100) // slightly less than half
                                         customDraw->clrText = RGB(0x00, 0x00, 0x00);
                                     else
-                                        customDraw->clrText = RGB(0xff, 0xff, 0xff);
+                                        customDraw->clrText = RGB(0xBD, 0xEC, 0xff);
                                 }
 
                                 if (!newFont)

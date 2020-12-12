@@ -439,7 +439,7 @@ BOOLEAN PhTnpOnCreate(
 
     if (Context->Style & TN_STYLE_CUSTOM_COLORS)
     {
-        Context->CustomTextColor = createParamaters->TextColor ? createParamaters->TextColor : RGB(0xff, 0xff, 0xff);
+        Context->CustomTextColor = createParamaters->TextColor ? createParamaters->TextColor : RGB(0xBD, 0xEC, 0xff);
         Context->CustomFocusColor = createParamaters->FocusColor ? createParamaters->FocusColor : RGB(0x0, 0x0, 0xff);
         Context->CustomSelectedColor = createParamaters->SelectionColor ? createParamaters->SelectionColor : RGB(0x0, 0x0, 0x80);
         Context->CustomColors = TRUE;
@@ -5095,7 +5095,7 @@ VOID PhTnpPaint(
             RECT tempRect;
             BLENDFUNCTION blendFunction;
 
-            SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+            SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
             SetDCBrushColor(hdc, RGB(30, 30, 30));
             FillRect(hdc, &rowRect, GetStockBrush(DC_BRUSH));
 
@@ -5303,7 +5303,7 @@ VOID PhTnpPaint(
 
         if (Context->ThemeSupport)
         {
-            SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+            SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
             SetDCBrushColor(hdc, RGB(30, 30, 30));
             FillRect(hdc, &rowRect, GetStockBrush(DC_BRUSH));
         }
@@ -5323,7 +5323,7 @@ VOID PhTnpPaint(
 
         if (Context->ThemeSupport)
         {
-            SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+            SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
             SetDCBrushColor(hdc, RGB(30, 30, 30));
             FillRect(hdc, &rowRect, GetStockBrush(DC_BRUSH));
         }
@@ -5344,7 +5344,7 @@ VOID PhTnpPaint(
 
         if (PhGetIntegerSetting(L"EnableThemeSupport"))
         {
-            SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+            SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
         }
         else
         {
@@ -5474,7 +5474,7 @@ VOID PhTnpPrepareRowForDraw(
         if (PhGetColorBrightness(Node->s.DrawBackColor) > 100) // slightly less than half
             Node->s.DrawForeColor = RGB(0x00, 0x00, 0x00);
         else
-            Node->s.DrawForeColor = RGB(0xff, 0xff, 0xff);
+            Node->s.DrawForeColor = RGB(0xBD, 0xEC, 0xff);
     }
 }
 
@@ -5768,7 +5768,7 @@ VOID PhTnpDrawPlusMinusGlyph(
     SelectPen(hdc, GetStockPen(DC_PEN));
     SetDCPenColor(hdc, RGB(0x55, 0x55, 0x55));
     SelectBrush(hdc, GetStockBrush(DC_BRUSH));
-    SetDCBrushColor(hdc, RGB(0xff, 0xff, 0xff));
+    SetDCBrushColor(hdc, RGB(0xBD, 0xEC, 0xff));
 
     width = Rect->right - Rect->left;
     height = Rect->bottom - Rect->top;

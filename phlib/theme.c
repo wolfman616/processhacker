@@ -158,7 +158,7 @@ BOOLEAN PhpThemeBorderEnable = TRUE;
 HBRUSH PhMenuBackgroundBrush = NULL;
 COLORREF PhpThemeWindowForegroundColor = RGB(28, 28, 28);
 COLORREF PhpThemeWindowBackgroundColor = RGB(43, 43, 43);
-COLORREF PhpThemeWindowTextColor = RGB(0xff, 0xff, 0xff);
+COLORREF PhpThemeWindowTextColor = RGB(0xBD, 0xEC, 0xff);
 HFONT PhpTabControlFontHandle = NULL;
 HFONT PhpToolBarFontHandle = NULL;
 HFONT PhpHeaderFontHandle = NULL;
@@ -616,8 +616,8 @@ BOOLEAN CALLBACK PhpThemeWindowEnumChildWindows(
         switch (PhpThemeColorMode)
         {
         case 0: // New colors
-            ListView_SetBkColor(WindowHandle, RGB(0xff, 0xff, 0xff));
-            ListView_SetTextBkColor(WindowHandle, RGB(0xff, 0xff, 0xff));
+            ListView_SetBkColor(WindowHandle, RGB(0xBD, 0xEC, 0xff));
+            ListView_SetTextBkColor(WindowHandle, RGB(0xBD, 0xEC, 0xff));
             ListView_SetTextColor(WindowHandle, RGB(0x0, 0x0, 0x0));
             break;
         case 1: // Old colors
@@ -672,7 +672,7 @@ BOOLEAN CALLBACK PhpThemeWindowEnumChildWindows(
         switch (PhpThemeColorMode)
         {
         case 0: // New colors
-            SendMessage(WindowHandle, EM_SETBKGNDCOLOR, 0, RGB(0xff, 0xff, 0xff));
+            SendMessage(WindowHandle, EM_SETBKGNDCOLOR, 0, RGB(0xBD, 0xEC, 0xff));
             break;
         case 1: // Old colors
             SendMessage(WindowHandle, EM_SETBKGNDCOLOR, 0, RGB(30, 30, 30));
@@ -758,8 +758,8 @@ BOOLEAN CALLBACK PhpReInitializeThemeWindowEnumChildWindows(
         switch (PhpThemeColorMode)
         {
         case 0: // New colors
-            ListView_SetBkColor(WindowHandle, RGB(0xff, 0xff, 0xff));
-            ListView_SetTextBkColor(WindowHandle, RGB(0xff, 0xff, 0xff));
+            ListView_SetBkColor(WindowHandle, RGB(0xBD, 0xEC, 0xff));
+            ListView_SetTextBkColor(WindowHandle, RGB(0xBD, 0xEC, 0xff));
             ListView_SetTextColor(WindowHandle, RGB(0x0, 0x0, 0x0));
             break;
         case 1: // Old colors
@@ -874,7 +874,7 @@ BOOLEAN PhThemeWindowDrawItem(
                 {
                 case 0: // New colors
                     SetTextColor(DrawInfo->hDC, GetSysColor(COLOR_GRAYTEXT));
-                    SetDCBrushColor(DrawInfo->hDC, RGB(0xff, 0xff, 0xff));
+                    SetDCBrushColor(DrawInfo->hDC, RGB(0xBD, 0xEC, 0xff));
                     break;
                 case 1: // Old colors
                     SetTextColor(DrawInfo->hDC, GetSysColor(COLOR_GRAYTEXT));
@@ -906,7 +906,7 @@ BOOLEAN PhThemeWindowDrawItem(
                 {
                 case 0: // New colors
                     SetTextColor(DrawInfo->hDC, GetSysColor(COLOR_WINDOWTEXT));
-                    SetDCBrushColor(DrawInfo->hDC, RGB(0xff, 0xff, 0xff));
+                    SetDCBrushColor(DrawInfo->hDC, RGB(0xBD, 0xEC, 0xff));
                     FillRect(DrawInfo->hDC, &DrawInfo->rcItem, GetStockBrush(DC_BRUSH));
                     break;
                 case 1: // Old colors
@@ -968,7 +968,7 @@ BOOLEAN PhThemeWindowDrawItem(
                 switch (PhpThemeColorMode)
                 {
                 case 0: // New colors
-                    SetDCBrushColor(DrawInfo->hDC, RGB(0xff, 0xff, 0xff));
+                    SetDCBrushColor(DrawInfo->hDC, RGB(0xBD, 0xEC, 0xff));
                     FillRect(DrawInfo->hDC, &DrawInfo->rcItem, GetStockBrush(DC_BRUSH));
                     break;
                 case 1: // Old colors
@@ -992,7 +992,7 @@ BOOLEAN PhThemeWindowDrawItem(
                 switch (PhpThemeColorMode)
                 {
                 case 0: // New colors
-                    SetDCBrushColor(DrawInfo->hDC, RGB(0xff, 0xff, 0xff));
+                    SetDCBrushColor(DrawInfo->hDC, RGB(0xBD, 0xEC, 0xff));
                     FillRect(DrawInfo->hDC, &DrawInfo->rcItem, GetStockBrush(DC_BRUSH));
                     break;
                 case 1: // Old colors
@@ -1089,7 +1089,7 @@ BOOLEAN PhThemeWindowDrawItem(
             {
             case 0: // New colors
                 SetTextColor(DrawInfo->hDC, GetSysColor(COLOR_WINDOWTEXT));
-                SetDCBrushColor(DrawInfo->hDC, RGB(0xff, 0xff, 0xff));
+                SetDCBrushColor(DrawInfo->hDC, RGB(0xBD, 0xEC, 0xff));
                 FillRect(DrawInfo->hDC, &DrawInfo->rcItem, GetStockBrush(DC_BRUSH));
                 break;
             case 1: // Old colors
@@ -2222,7 +2222,7 @@ LRESULT CALLBACK PhpThemeWindowTabControlWndSubclassProc(
                         {
                             if (TabCtrl_GetCurSel(WindowHandle) == i)
                             {
-                                SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+                                SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
                                 SetDCBrushColor(hdc, RGB(128, 128, 128));
                                 FillRect(hdc, &itemRect, GetStockBrush(DC_BRUSH));
                             }
@@ -2254,7 +2254,7 @@ LRESULT CALLBACK PhpThemeWindowTabControlWndSubclassProc(
                             if (TabCtrl_GetCurSel(WindowHandle) == i)
                             {
                                 SetTextColor(hdc, RGB(0x0, 0x0, 0x0));
-                                SetDCBrushColor(hdc, RGB(0xff, 0xff, 0xff));
+                                SetDCBrushColor(hdc, RGB(0xBD, 0xEC, 0xff));
                                 FillRect(hdc, &itemRect, GetStockBrush(DC_BRUSH));
                             }
                             else
@@ -2652,12 +2652,12 @@ LRESULT CALLBACK PhpThemeWindowStatusbarWndSubclassProc(
                     switch (PhpThemeColorMode)
                     {
                     case 0: // New colors
-                        SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+                        SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
                         SetDCBrushColor(hdc, RGB(64, 64, 64));
                         FillRect(hdc, &blockRect, GetStockBrush(DC_BRUSH));
                         break;
                     case 1: // Old colors
-                        SetTextColor(hdc, RGB(0xff, 0xff, 0xff));
+                        SetTextColor(hdc, RGB(0xBD, 0xEC, 0xff));
                         SetDCBrushColor(hdc, RGB(128, 128, 128));
                         FillRect(hdc, &blockRect, GetStockBrush(DC_BRUSH));
                         break;
